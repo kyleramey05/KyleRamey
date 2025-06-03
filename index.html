@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Food Carousel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>Healthy Food Picker</nav>
+  <div class="container">
+    <button id="randomButton">RANDOM FOOD BUTTON</button>
+    <div class="carousel-wrapper">
+      <div class="carousel" id="carousel1">
+        <div class="food-box">Broccoli</div>
+        <div class="food-box">Carrot</div>
+        <div class="food-box">Spinach</div>
+        <div class="food-box">Apple</div>
+        <div class="food-box">Almonds</div>
+        <div class="food-box">Blueberries</div>
+      </div>
+    </div>
+    <br>
+    <div class="carousel-wrapper">
+      <div class="carousel reverse" id="carousel2">
+        <div class="food-box">Quinoa</div>
+        <div class="food-box">Avocado</div>
+        <div class="food-box">Kale</div>
+        <div class="food-box">Salmon</div>
+        <div class="food-box">Sweet Potato</div>
+        <div class="food-box">Chickpeas</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const foods = [
+      "Broccoli", "Carrot", "Spinach", "Apple", "Almonds", "Blueberries",
+      "Quinoa", "Avocado", "Kale", "Salmon", "Sweet Potato", "Chickpeas"
+    ];
+
+    const button = document.getElementById('randomButton');
+    button.addEventListener('click', () => {
+      const randomFood = foods[Math.floor(Math.random() * foods.length)];
+      alert(`Your random healthy food is: ${randomFood}`);
+    });
+  </script>
+</body>
+</html>
+    </p>
+</body>
+</html>

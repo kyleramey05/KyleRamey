@@ -1,0 +1,94 @@
+:root {
+  --main-color: #42b9ff;
+  --button-color: #f44336;
+  --box-color: #e0f7fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: var(--main-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.container {
+  padding: 2rem;
+  text-align: center;
+}
+
+#randomButton {
+  background-color: var(--button-color);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  gap: 1rem;
+  animation: scroll 15s linear infinite;
+}
+
+.carousel.reverse {
+  animation-direction: reverse;
+}
+
+.food-box {
+  min-width: 100px;
+  height: 100px;
+  background-color: var(--box-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  #randomButton {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .carousel {
+    gap: 0.5rem;
+  }
+
+  .food-box {
+    min-width: 80px;
+    height: 80px;
+    font-size: 0.9rem;
+  }
+}
